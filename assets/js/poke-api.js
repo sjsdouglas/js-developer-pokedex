@@ -14,6 +14,11 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
+    const stats = pokeDetail.stats.map((statSlot) => {
+        return { label: statSlot.stat.name, value: statSlot.base_stat }
+    })
+    pokemon.stats = stats
+
     return pokemon
 }
 

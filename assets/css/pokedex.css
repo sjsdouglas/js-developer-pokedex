@@ -84,6 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    place-content: center;
 }
 
 .pokemon .number {
@@ -144,6 +145,92 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+.active {
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+}
+.active .name {
+    align-self: flex-start;
+}
+.active .number {
+    place-self: flex-end;
+    color: #FFF;
+    opacity: 1;
+}
+.active .detail {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+.active .detail .types {
+    display: flex;
+    align-self: flex-start;
+    gap: 4px;
+}
+.active img {
+    height: 130px !important;
+    width: auto;
+    z-index: 1;
+}
+.active .description {
+    place-self: center;
+    border-radius: 1rem;
+    background-color: #FFF;
+    padding: .825rem;
+    margin: -1rem -1rem -.5rem -1rem;
+    width: 100%;
+}
+.active .descriptionList {
+    padding: 0;
+    justify-self: left;
+    list-style: none;
+    color: #000;
+    font-size: .625rem;
+}
+.active .description .descriptionList .stat {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 0;
+}
+.active .bar {
+    background-color: #00000010;
+    height: 4px;
+    width: 80%;
+    border-radius: 1rem;
+    overflow: clip;
+}
+.active .bar div {
+    background-color: #00000005;
+    height: 100%;
+    border-radius: 1rem;
+}
+.hp .bar div, .defense .bar div,
+.speed .bar div {
+    background-color: #fb6e6e;
+}
+.attack .bar div, .special-attack .bar div,
+.special-defense .bar div {
+    background-color: #50c27e;
+}
+.info .label {
+    color: #00000090;
+}
+.active .description .descriptionList .stat .info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 6px;
+    min-width: 80px;
+    align-items: center;
+}
+.hidden {
+    display: none;
 }
 
 @media screen and (min-width: 380px) {

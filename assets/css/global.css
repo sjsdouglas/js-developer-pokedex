@@ -1,6 +1,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    transition: ease-in-out .125s;
 }
 
 body {
